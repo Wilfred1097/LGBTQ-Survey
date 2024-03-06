@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LGBTQ Survey</title>
+<!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  body {
+    margin: 10px auto 20px auto;
+    background: linear-gradient(120deg, #FFD700, #FF8C00, #FF1493, #4B0082, #0000FF, #228B22);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+  }
+
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  #animated-title {
+    font-size: 40px;
+    margin-bottom: 0px;
+    background: linear-gradient(120deg, #FFD700, #FF8C00, #FF1493, #4B0082, #0000FF, #228B22);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h5 class="card-title" id="animated-title"><strong>LGBTQ Survey</strong></h5>
+    </div>
+    <div class="card-body">
+      <form action="/submit_survey" method="post">
+        <!-- Email -->
+        <div class="form-group mb-5">
+          <label>Please enter your email address:</label><br>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Your email address" required>
+      </div>
+        <!-- Number 1 -->
+        <div class="form-group">
+          <label>1. What is your age?</label><br>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="age" id="age_under18" value="Under 18">
+              <label class="form-check-label" for="age_under18">Under 18</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="age" id="age_1824" value="18-24">
+              <label class="form-check-label" for="age_1824">18-24</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="age" id="age_2534" value="25-34">
+              <label class="form-check-label" for="age_2534">25-34</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="age" id="age_3544" value="35-44">
+              <label class="form-check-label" for="age_3544">35-44</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="age" id="age_4544" value="45-54">
+              <label class="form-check-label" for="age_4544">45-54</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="age" id="age_5564" value="55-64">
+              <label class="form-check-label" for="age_5564">55-64</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="age" id="age_65_older" value="65-or-older">
+              <label class="form-check-label" for="age_65_older">65 or older</label>
+          </div>
+      </div>
+        <!-- Number 2 -->
+        <div class="form-group">
+          <label>2. What is your gender identity?</label><br>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gender_identity" id="gender_male" value="Male">
+            <label class="form-check-label" for="gender_male">Male</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gender_identity" id="gender_female" value="Female">
+            <label class="form-check-label" for="gender_female">Female</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gender_identity" id="gender_non-binary" value="gender_non-binary">
+            <label class="form-check-label" for="gender_non-binary">Non-binary/genderqueer</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gender_identity" id="not-to-say" value="not-to-say">
+            <label class="form-check-label" for="not-to-say">Prefer not to say</label>
+          </div>
+        </div>
+        <!-- Number 3 -->
+        <div class="form-group">
+          <label>3. What is your  sexual orientation?</label><br>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="sexual-orientation" id="sexual_lesbian" value="Lesbian">
+            <label class="form-check-label" for="sexual_lesbian">Lesbian</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="sexual-orientation" id="sexual_gay" value="Gay">
+            <label class="form-check-label" for="sexual_gay">Gay</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="sexual-orientation" id="sexual_bisexual" value="Bisexual">
+            <label class="form-check-label" for="sexual_bisexual">Bisexual</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="sexual-orientation" id="sexual_pansexual" value="Pansexual">
+            <label class="form-check-label" for="sexual_pansexual">Pansexual</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="sexual-orientation" id="sexual_asexual" value="Asexual">
+            <label class="form-check-label" for="sexual_asexual">Asexual</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="sexual-orientation" id="sexual_queer" value="Queer">
+            <label class="form-check-label" for="sexual_queer">Queer</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="sexual-orientation" id="sexual_not_to_say" value="prefer_not_to_say">
+            <label class="form-check-label" for="sexual_not_to_say">Prefer not to say</label>
+          </div>
+        </div>
+        <!-- Number 4 -->
+        <div class="form-group">
+          <label>4. Have you ever experienced discrimination or harassment based on your sexual orientation or gender identity in the Philippines?</label><br>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="discrimination" id="discrimination_yes" value="Yes">
+            <label class="form-check-label" for="discrimination_yes">Yes</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="discrimination" id="discrimination_no" value="No">
+            <label class="form-check-label" for="discrimination_no">No</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="discrimination" id="discrimination_not_to_say" value="not_to_say">
+            <label class="form-check-label" for="discrimination_not_to_say">Prefer not to say</label>
+          </div>
+        </div>
+        <!-- Number 5 -->
+        <div class="form-group">
+          <label>5. Have you ever openly identified as LGBTQ (lesbian, gay, bisexual, transgender, queer) in any context?</label><br>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="identified" id="identified_yes" value="Yes">
+            <label class="form-check-label" for="identified_yes">Yes</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="identified" id="identified_no" value="No">
+            <label class="form-check-label" for="identified_no">No</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="identified" id="identified_not_to_say" value="not_to_say">
+            <label class="form-check-label" for="identified_not_to_say">Unsure</label>
+          </div>
+        </div>
+        <!-- Number 6 -->
+        <div class="form-group">
+          <label>6. How comfortable do you feel discussing LGBTQ topics with your family?</label><br>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="family_comfort" id="family_very_comfortable" value="Very comfortable">
+              <label class="form-check-label" for="family_very_comfortable">Very comfortable</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="family_comfort" id="family_somewhat_comfortable" value="Somewhat comfortable">
+              <label class="form-check-label" for="family_somewhat_comfortable">Somewhat comfortable</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="family_comfort" id="family_neutral" value="Neutral">
+              <label class="form-check-label" for="family_neutral">Neutral</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="family_comfort" id="family_somewhat_uncomfortable" value="Somewhat uncomfortable">
+              <label class="form-check-label" for="family_somewhat_uncomfortable">Somewhat uncomfortable</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="family_comfort" id="family_very_uncomfortable" value="Very uncomfortable">
+              <label class="form-check-label" for="family_very_uncomfortable">Very uncomfortable</label>
+          </div>
+      </div>
+      <!-- Number 7 -->
+      <div class="form-group">
+          <label>7. How comfortable do you feel discussing LGBTQ topics with your friends?</label><br>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="friends_comfort" id="friends_very_comfortable" value="Very comfortable">
+              <label class="form-check-label" for="friends_very_comfortable">Very comfortable</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="friends_comfort" id="friends_somewhat_comfortable" value="Somewhat comfortable">
+              <label class="form-check-label" for="friends_somewhat_comfortable">Somewhat comfortable</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="friends_comfort" id="friends_neutral" value="Neutral">
+              <label class="form-check-label" for="friends_neutral">Neutral</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="friends_comfort" id="friends_somewhat_uncomfortable" value="Somewhat uncomfortable">
+              <label class="form-check-label" for="friends_somewhat_uncomfortable">Somewhat uncomfortable</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="friends_comfort" id="friends_very_uncomfortable" value="Very uncomfortable">
+              <label class="form-check-label" for="friends_very_uncomfortable">Very uncomfortable</label>
+          </div>
+      </div>
+      <!-- Number 8 -->
+      <div class="form-group">
+          <label>8. Have you accessed LGBTQ support services or organizations in the Philippines?</label><br>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="lgbtq_support" id="lgbtq_yes" value="Yes">
+              <label class="form-check-label" for="lgbtq_yes">Yes</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="lgbtq_support" id="lgbtq_no" value="No">
+              <label class="form-check-label" for="lgbtq_no">No</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="lgbtq_support" id="lgbtq_unsure" value="Unsure">
+              <label class="form-check-label" for="lgbtq_unsure">Unsure</label>
+          </div>
+      </div>
+      <!-- Number 9 -->
+      <div class="form-group">
+          <label>9. Have you ever faced verbal or physical abuse due to your sexual orientation or gender identity in the Philippines?</label><br>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="abuse_experience" id="abuse_yes" value="Yes">
+              <label class="form-check-label" for="abuse_yes">Yes</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="abuse_experience" id="abuse_no" value="No">
+              <label class="form-check-label" for="abuse_no">No</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="abuse_experience" id="abuse_prefer_not_to_say" value="Prefer not to say">
+              <label class="form-check-label" for="abuse_prefer_not_to_say">Prefer not to say</label>
+          </div>
+      </div>
+      <!-- Number 10 -->
+      <div class="form-group">
+          <label for="societal_acceptance">10. How would you rate the overall level of societal acceptance of LGBTQ individuals in the Philippines?</label><br>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="societal_acceptance" id="very_accepting" value="Very accepting">
+              <label class="form-check-label" for="very_accepting">Very accepting</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="societal_acceptance" id="somewhat_accepting" value="Somewhat accepting">
+              <label class="form-check-label" for="somewhat_accepting">Somewhat accepting</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="societal_acceptance" id="neutral" value="Neutral">
+              <label class="form-check-label" for="neutral">Neutral</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="societal_acceptance" id="somewhat_unaccepting" value="Somewhat unaccepting">
+              <label class="form-check-label" for="somewhat_unaccepting">Somewhat unaccepting</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="societal_acceptance" id="very_unaccepting" value="Very unaccepting">
+              <label class="form-check-label" for="very_unaccepting">Very unaccepting</label>
+          </div>
+      </div>
+      <!-- Number 11 -->
+      <div class="form-group">
+          <label>11. Have you ever felt the need to hide or conceal your sexual orientation or gender identity in certain environments (e.g., work, school, public spaces) in the Philippines?</label><br>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="hiding_gender_identity" id="hiding_yes" value="Yes">
+              <label class="form-check-label" for="hiding_yes">Yes</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="hiding_gender_identity" id="hiding_no" value="No">
+              <label class="form-check-label" for="hiding_no">No</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="hiding_gender_identity" id="hiding_sometimes" value="Sometimes">
+              <label class="form-check-label" for="hiding_sometimes">Sometimes</label>
+          </div>
+      </div>
+      <!-- Number 12 -->
+      <div class="form-group">
+          <label>12. How do you perceive the legal rights and protections for LGBTQ individuals in the Philippines?</label><br>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="legal_protections" id="legal_very_adequate" value="Very adequate">
+              <label class="form-check-label" for="legal_very_adequate">Very adequate</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="legal_protections" id="legal_adequate" value="Adequate">
+              <label class="form-check-label" for="legal_adequate">Adequate</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="legal_protections" id="legal_neutral" value="Neutral">
+              <label class="form-check-label" for="legal_neutral">Neutral</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="legal_protections" id="legal_inadequate" value="Inadequate">
+              <label class="form-check-label" for="legal_inadequate">Inadequate</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="legal_protections" id="legal_very_inadequate" value="Very inadequate">
+              <label class="form-check-label" for="legal_very_inadequate">Very inadequate</label>
+          </div>
+      </div>
+      <!-- Number 13 -->
+      <div class="form-group">
+          <label>13. How inclusive do you find LGBTQ representation in media and popular culture in the Philippines?</label><br>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="lgbtq_representation" id="very_inclusive" value="Very inclusive">
+              <label class="form-check-label" for="very_inclusive">Very inclusive</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="lgbtq_representation" id="somewhat_inclusive" value="Somewhat inclusive">
+              <label class="form-check-label" for="somewhat_inclusive">Somewhat inclusive</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="lgbtq_representation" id="neutral" value="Neutral">
+              <label class="form-check-label" for="neutral">Neutral</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="lgbtq_representation" id="somewhat_exclusive" value="Somewhat exclusive">
+              <label class="form-check-label" for="somewhat_exclusive">Somewhat exclusive</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="lgbtq_representation" id="very_exclusive" value="Very exclusive">
+              <label class="form-check-label" for="very_exclusive">Very exclusive</label>
+          </div>
+      </div>
+      <!-- Number 14 -->
+      <div class="form-group">
+        <label>14. Have you participated in LGBTQ-related advocacy or activism in the Philippines?</label><br>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="lgbtq_advocacy" id="lgbtq_advocacy_yes" value="Yes">
+            <label class="form-check-label" for="lgbtq_advocacy_yes">Yes</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="lgbtq_advocacy" id="lgbtq_advocacy_no" value="No">
+            <label class="form-check-label" for="lgbtq_advocacy_no">No</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="lgbtq_advocacy" id="lgbtq_advocacy_interested" value="Interested but haven't participated yet">
+            <label class="form-check-label" for="lgbtq_advocacy_interested">Interested but haven't participated yet</label>
+        </div>
+    </div>
+    <!-- Number 15 -->
+    <div class="form-group">
+        <label>15. How do you feel about the representation of LGBTQ individuals in educational curricula in the Philippines?</label><br>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="lgbtq_representation" id="representation_very_positive" value="Very positive">
+            <label class="form-check-label" for="representation_very_positive">Very positive</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="lgbtq_representation" id="representation_somewhat_positive" value="Somewhat positive">
+            <label class="form-check-label" for="representation_somewhat_positive">Somewhat positive</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="lgbtq_representation" id="representation_neutral" value="Neutral">
+            <label class="form-check-label" for="representation_neutral">Neutral</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="lgbtq_representation" id="representation_somewhat_negative" value="Somewhat negative">
+            <label class="form-check-label" for="representation_somewhat_negative">Somewhat negative</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="lgbtq_representation" id="representation_very_negative" value="Very negative">
+            <label class="form-check-label" for="representation_very_negative">Very negative</label>
+        </div>
+    </div>
+
+
+
+        </div>
+        <button type="submit" class="btn btn-primary" style="font-size: 25px"><strong>Submit</strong></button>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
